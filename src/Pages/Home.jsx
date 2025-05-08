@@ -62,6 +62,30 @@ const Home = () => {
           />
         </svg>
       </div>
+
+
+      {show && 
+      
+      <div className='w-screen main  overflow-hidden '>
+        {/* Landing_Pages: */}
+
+        <div className='landing-page w-screen h-screen '>
+
+{/* Images-section */}
+<div className='w-full h-screen relative'>
+
+<img  src="/bg (1).png" alt='' className='absolute object-cover  w-full h-full z-1 left-0 top-0'/>
+<img  src="/sky.png" alt='' className='absolute object-cover  w-full h-full '/>
+<img   src="/girlbg.png" alt='' className='absolute object-cover   left-1/2 z-2 -translate-x-1/2 md:-bottom-[55%] -bottom-[20%]'/>
+
+
+
+</div>
+
+        </div>
+        
+       </div>
+      }
     </>
   )
 }
