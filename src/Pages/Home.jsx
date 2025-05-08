@@ -67,16 +67,34 @@ const Home = () => {
       {show && 
       
       <div className='w-screen main  overflow-hidden '>
-        {/* Landing_Pages: */}
+        {/* Landing_Page: */}
 
         <div className='landing-page w-screen h-screen '>
+{/* Navigation-bar */}
+<div className='fixed top-0 left-0 w-full h-[60px] px-4 flex items-center  z-[10]'>
+
+   <div className='logo flex items-center gap-5'>
+<div className='flex flex-col gap-1 mt-2'>
+    <span className='w-15 h-1 bg-white'></span>
+    <span className='w-10 h-1 bg-white'></span>
+
+    <span className='w-5 h-1 bg-white'></span>
+
+</div>
+
+   <h2 className='font-semibold text-white logo text-2xl leading-none'>Rockstart</h2>
+   </div>
+</div>
+
+
+
 
 {/* Images-section */}
-<div className='w-full h-screen relative'>
+<div className='w-full h-screen relative images-div'>
 
-<img  src="/bg (1).png" alt='' className='absolute object-cover  w-full h-full z-1 left-0 top-0'/>
-<img  src="/sky.png" alt='' className='absolute object-cover  w-full h-full '/>
-<img   src="/girlbg.png" alt='' className='absolute object-cover   left-1/2 z-2 -translate-x-1/2 md:-bottom-[55%] -bottom-[20%]'/>
+<img  src="/bg (1).png" alt='' className='absolute object-cover  w-full h-full z-1 left-0 top-0 pointer-events-none'/>
+<img  src="/sky.png" alt='' className='absolute object-cover  w-full h-full pointer-events-none'/>
+<img   src="/girlbg.png" alt='' className='absolute object-cover  pointer-events-none  left-1/2 z-2 -translate-x-1/2 xl:-bottom-[55%] -bottom-[20%]'/>
 
 
 
