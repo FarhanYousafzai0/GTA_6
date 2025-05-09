@@ -29,6 +29,34 @@ const Home = () => {
           duration: 2,
         });
       });
+      useGSAP(() => {
+        // gsap.fromTo(
+        //   ".mouse-path",
+        //   { strokeDasharray: "10", strokeDashoffset: "10" },
+        //   {
+        //     strokeDashoffset: "0",
+        //     duration: 1,
+        //     ease: "power2.out",
+        //     scrollTrigger: {
+        //       trigger: ".mouse-icon",
+        //       start: "top bottom", // when mouse icon enters the viewport
+        //       toggleActions: "play none none none",
+        //     },
+        //   }
+        // );
+      
+        gsap.fromTo(
+          ".mouse-icon",
+          { y: 0 },
+          {
+            y: -10,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+            duration: 1.2,
+          }
+        );
+      });
       
     
   return (
@@ -69,7 +97,7 @@ const Home = () => {
       <div className='w-screen main  overflow-hidden '>
         {/* Landing_Page: */}
 
-        <div className='landing-page w-screen h-screen '>
+        <div className='landing-page w-screen h-screen realtive'>
 {/* Navigation-bar */}
 <div className='fixed top-0 left-0 w-full h-[60px] px-4 flex items-center  z-[10]'>
 
@@ -86,7 +114,17 @@ const Home = () => {
    </div>
 </div>
 
+{/* Hero-title */}
 
+<div className='absolute w-full left-1/2 top-0 -translate-x-1/2  z-[2] text-center'>
+
+<h1 className='text-9xl text-white -ml-20 leading-none'>grand</h1>
+<h1 className='text-9xl text-white leading-none'>theft</h1>
+<h1 className='text-9xl text-white -ml-20 leading-none'>auto</h1>
+
+
+
+</div>
 
 
 {/* Images-section */}
@@ -94,16 +132,45 @@ const Home = () => {
 
 <img  src="/bg (1).png" alt='' className='absolute object-cover  w-full h-full z-1 left-0 top-0 pointer-events-none'/>
 <img  src="/sky.png" alt='' className='absolute object-cover  w-full h-full pointer-events-none'/>
-<img   src="/girlbg.png" alt='' className='absolute object-cover  pointer-events-none  left-1/2 z-2 -translate-x-1/2 xl:-bottom-[55%] -bottom-[20%]'/>
+<img   src="/girlbg.png" alt='' className='absolute object-cover  pointer-events-none  left-1/2 z-2 -translate-x-1/2 xl:-bottom-[65%] -bottom-[20%]'/>
 
 
 
 </div>
 
+
+{/* Bottom_bar */}
+<div className='w-full h-[70px] px-10  absolute bottom-0 left-0 flex  text-white bg-gradient-to-t from-black to-transparent  z-[10]'>
+
+<div className='flex items-center gap-1'>
+<div className="mouse-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+    className="lucide lucide-mouse">
+    <rect x="5" y="2" width="14" height="20" rx="7" />
+    <path d="M12 6v4" className="mouse-path" />
+  </svg>
+</div>
+
+
+
+<h3 className='font-sans font-semibold'>Scroll down</h3>
+</div>
+
+<img width={200} src='/ps5.png' alt='Ps4' className='absolute left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2'/>
+
+
+</div>
+
+
+
         </div>
         
        </div>
+
+      
       }
+     
     </>
   )
 }
