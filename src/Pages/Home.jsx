@@ -119,7 +119,7 @@ const Home = () => {
       </div>
 
       {show && (
-        <div className="w-screen main overflow-hidden">
+        <div className="w-screen main overflow-x-hidden">
           {/* Landing_Page: */}
           <div className="landing-page w-screen h-screen relative">
             {/* Navigation-bar */}
@@ -138,7 +138,7 @@ const Home = () => {
             </div>
 
             {/* Hero-title */}
-            <div className="absolute text w-full left-1/2 top-0 -translate-x-1/2 z-[2] h-full text-center pointer-events-none flex flex-col items-center justify-center">
+            <div className="absolute text w-full left-1/2 overflow-hidden top-0 -translate-x-1/2 z-[2] h-full text-center pointer-events-none flex flex-col items-center justify-center">
               <h1 className="md:text-[10rem] text-[8rem] text-white leading-none">
                 grand
               </h1>
@@ -151,7 +151,7 @@ const Home = () => {
             </div>
 
             {/* Images-section */}
-            <div className="w-full h-screen relative images-div">
+            <div className="w-full h-screen relative images-div overflow-hidden">
               <img
                 src="/bg (1).png"
                 alt=""
@@ -171,37 +171,77 @@ const Home = () => {
 
             {/* Bottom_bar */}
             <div className="w-full h-[70px] px-5 absolute bottom-0 left-0 flex text-white bg-gradient-to-t from-black to-transparent z-[10]">
-  <div className="flex items-center gap-1">
-    <div className="mouse-icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="36"
-        height="36"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-mouse"
-      >
-        <rect x="5" y="2" width="14" height="20" rx="7" />
-        <path d="M12 6v4" className="mouse-path" />
-      </svg>
+              <div className="flex items-center gap-1 overflow-hidden">
+                <div className="mouse-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-mouse"
+                  >
+                    <rect x="5" y="2" width="14" height="20" rx="7" />
+                    <path d="M12 6v4" className="mouse-path" />
+                  </svg>
+                </div>
+
+                <h3 className="font-sans font-semibold">Scroll down</h3>
+              </div>
+
+              <img
+                width={200}
+                src="/ps5.png"
+                alt="Ps4"
+                className="absolute right-3 top-1/2 md:right-1/2 md:translate-x-1/2 -translate-y-1/2"
+              />
+            </div>
+          </div>
+
+          {/* Image and Text Section */}
+          <div className='w-full h-screen bg-black p-8'>
+  <div className='flex flex-col md:flex-row justify-between h-full gap-8'>
+    {/* Left Section: Image */}
+    <div className='md:w-1/2 w-full h-1/2 md:h-full'>
+      <img
+        src='/imag.png'
+        alt='Image'
+        className='w-full h-full object-cover rounded-lg'
+      />
     </div>
 
-    <h3 className="font-sans font-semibold">Scroll down</h3>
-  </div>
+    {/* Right Section: Text */}
+    <div className='md:w-1/2 w-full flex flex-col items-start justify-center gap-4 mt-10 md:mt-0'>
+      <h2 className='text-white text-5xl md:text-8xl font-semibold leading-tight'>
+        not hunting,
+      </h2>
+      <h2 className='text-white text-5xl md:text-8xl font-semibold leading-tight'>
+        just running
+      </h2>
 
-  <img
-    width={200}
-    src="/ps5.png"
-    alt="Ps4"
-    className="absolute right-3 top-1/2 md:right-1/2 md:translate-x-1/2  -translate-y-1/2"
-  />
+      <p className='text-white font-mono mt-4'>
+        Vice City, USA. Jason and Lucia have always known the deck is stacked
+        against them. But when an easy score goes wrong, they find themselves
+        on the darkest ...
+      </p>
+
+      <p className='text-white font-mono mt-2'>
+        Vice City, USA. Jason and Lucia have always known the deck is stacked
+        against them. But when an easy score goes wrong, they find themselves
+        on the darkest ...
+      </p>
+
+      <button className='bg-yellow-500 text-black rounded-lg cursor-pointer px-10 py-4 mt-10 w-full md:w-auto hover:bg-yellow-400 transition-all duration-300'>
+        Play Now
+      </button>
+    </div>
+  </div>
 </div>
 
-          </div>
         </div>
       )}
     </>
